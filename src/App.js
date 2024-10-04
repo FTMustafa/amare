@@ -13,13 +13,16 @@ import SignupLinks from './components/pages/Country/SignupLinks'
 import CountrySignup from './components/pages/Country/CountrySignup'
 import BlogList from './components/pages/Blog/BlogList';
 import BlogDetail from './components/pages/Blog/BlogDetail';
-
+import ShippingPolicy from './components/pages/Footer_pages/ShippingPolicy';
+import ReturnPolicy from "./components/pages/Footer_pages/ReturnPolicy";
+import ScrollToTop from "./components/pages/ScrollToTop";
 
 function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
         <div className="app">
+          <ScrollToTop/>
           <Routes>
             <Route path="/home" element={<Navigate to="/" replace />} />
             <Route path="/" element={<Home />}>
@@ -33,7 +36,9 @@ function App() {
               {/* Blog Routes */}
               <Route path="blogs" element={<BlogList />} />  {/* Blog listesi */}
               <Route path="blogs/:link" element={<BlogDetail />} />  {/* Blog detayı */}
-
+               {/* Footer Pages Routes */}
+               <Route path="/shipping-policy" element={<ShippingPolicy />} />
+               <Route path="/return-policy" element={<ReturnPolicy />} />
             </Route>
           </Routes>
         </div>
