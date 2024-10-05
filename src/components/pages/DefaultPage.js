@@ -140,19 +140,29 @@ function DefaultPage() {
           and products. Read our articles on health and products and click now
           to stay updated with the latest information.
         </p>
-        <div className="blog-button" onClick={()=>navigate('/blogs')}>
+        <div className="blog-button" onClick={() => navigate("/blogs")}>
           <strong>Blogs</strong>
         </div>
       </section>
       <footer>
         <img src={amare} alt="Amare logo" />
-        <p id="p">
-          This is an Amare Global Independent Distributor website. This site is
-          not owned or operated by Amare Global. Any information, views, or
-          representations on this website are my own and not endorsed by Amare
-          Global. For official information and inquiries, please visit the
-          Official Amare Website Amare Brand Partner #1942935
-        </p>
+        <div className="footer-mid">
+          <p id="p">
+            This is an Amare Global Independent Distributor website. This site
+            is not owned or operated by Amare Global. Any information, views, or
+            representations on this website are my own and not endorsed by Amare
+            Global. For official information and inquiries, please visit the
+            Official Amare Website Amare Brand Partner #1942935
+          </p>
+          <div className="footer-mid-bottom">
+            <a onClick={() => navigate("/return-policy")}>
+              Return Policy
+            </a>
+            <a onClick={() => navigate("/shipping-policy")}>
+              Shipping Policy
+            </a>
+          </div>
+        </div>
         <address className="footer-side">
           <h4 id="h4">Customer Service</h4>
           <p>

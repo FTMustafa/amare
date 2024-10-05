@@ -147,8 +147,10 @@ footer {
   height: 250px;
   width: 100%;
   max-width: 1200px;
-  margin-top: 40px;
+  margin-top: 20px;
   padding: 0 20px;
+  gap: 1em;
+  margin-bottom: 10px;
 }
 
 footer > img {
@@ -156,11 +158,26 @@ footer > img {
 }
 
 #p {
-  max-width: 40%;
+  max-width: 100%;
   text-align: left;
-  margin-bottom: 50px;
 }
-
+.footer-mid-bottom{
+  display: flex;
+  gap: 10px;
+}
+.footer-mid>.footer-mid-bottom>a{
+  font-size: 14px;
+  max-width: 100px;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+.footer-mid{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  max-height: 150px;
+}
 .footer-side {
   display: flex;
   flex-direction: column;
@@ -218,6 +235,43 @@ footer > img {
   .wide-ads-side > h1 {
     max-width: 90%;
   }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    padding: 20px 10px; /* Yatay ve dikeyde daha fazla boşluk ekleyin */
+  }
+
+  .footer-mid {
+    width: 90%; /* Footer ortasındaki metni tam genişlik yapın */
+    max-height: none; /* Max-height sınırını kaldırın */
+    margin-bottom: 20px; /* Daha fazla alt boşluk ekleyin */
+  }
+
+  .footer-mid p {
+    text-align: center; /* Mobil cihazlar için ortalayın */
+    font-size: 14px; /* Yazı boyutunu küçültün */
+  }
+
+  .footer-mid > a {
+    font-size: 16px; /* Linklerin okunabilirliğini artırın */
+    margin-top: 10px; /* Linkler arasında boşluk bırakın */
+  }
+
+  .footer-side {
+    width: 90%; /* Yan içeriği de tam genişlik yapın */
+    margin-top: 20px; /* Diğer bölümlerle arada boşluk bırakın */
+  }
+
+  .footer-side p {
+    font-size: 14px; /* Yazı boyutunu biraz küçültün */
+  }
+
+  footer > img {
+    max-width: 60%; /* Logoyu küçültün ama merkezde tutun */
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -231,6 +285,7 @@ footer > img {
   }
 
   footer {
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -295,17 +350,42 @@ footer > img {
     width: 80px;
     margin-bottom: 10px;
   }
-
-  footer > img {
-    max-width: 80%;
-    margin-bottom: 20px;
-  }
-
+  
   #p {
     max-width: 80%;
   }
 
+  footer {
+    padding: 10px; /* Daha küçük padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  footer img {
+    max-width: 80%; /* Logo daha da küçültülebilir */
+    margin-bottom: 15px;
+  }
+
+  .footer-mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%; /* Tam genişlik */
+    margin-bottom: 15px;
+  }
+
+  .footer-mid p {
+    font-size: 13px; /* Daha küçük metin boyutu */
+  }
+
   .footer-side {
-    max-width: 80%;
+    width: 100%; /* Tam genişlik */
+    margin-top: 15px;
+  }
+
+  .footer-side p {
+    font-size: 13px; /* Daha küçük metin */
   }
 }
